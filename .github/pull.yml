@@ -1,0 +1,23 @@
+version: "1"
+rules:
+  # Required. Target branch
+  - base: master
+    # Required. Must be in the same fork network.
+    # Add the owner before the colon
+    upstream: microsoft:master
+    # Optional, one of [none, merge, squash, rebase, hardreset]
+    # Default: none
+    mergeMethod: rebase
+    # Optional, merge pull request even when the mergeable_state is not clean.
+    # Default: false
+    mergeUnstable: false
+    # Optional
+    assignees:
+      - adamtajti
+    # Optional, on merge conflict assign a reviewer
+    conflictReviewers:
+      - adamtajti
+# Optional
+label: ":arrow_heading_down: pull"
+# Optional, on merge conflict assign a custom label, Default: merge-conflict
+conflictLabel: "merge-conflict"
