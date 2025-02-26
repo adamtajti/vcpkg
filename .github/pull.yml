@@ -12,8 +12,8 @@ rules:
     # Default: false
     mergeUnstable: false
     # Optional
-    assignees:
-      - adamtajti
+    #assignees:
+    #  - adamtajti
     # Optional, on merge conflict assign a reviewer
     conflictReviewers:
       - adamtajti
